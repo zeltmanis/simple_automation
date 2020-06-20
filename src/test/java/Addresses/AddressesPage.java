@@ -33,4 +33,9 @@ public class AddressesPage {
     public WebElement checkNewAddress(){
         return new_address;
     }
+
+    public void clickNewAddress(){
+        this.wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(NEW_ADDRESS)));
+        new_address.click();
+    }
 }

@@ -33,6 +33,27 @@ public class LogInTest {
         addressesPage.checkNewAddress();
     }
 
+    @Test
+    public void createNewContact() throws InterruptedException {
+        driver.get(Utils.BASE_URL);
+        LogInPage logInPage = new LogInPage(driver);
+        SignInPage signinpage = new SignInPage(driver);
+        AddressesPage addressesPage = new AddressesPage(driver);
+        NewProfile newProfile = new NewProfile(driver);
+        logInPage.clickSignIn();
+        signinpage.enterEmail();
+        signinpage.enterPassword();
+        signinpage.clickSignInButton();
+        logInPage.clickAddresses();
+        Thread.sleep(2000);
+        addressesPage.checkNewAddress();
+        addressesPage.clickNewAddress();
+        newProfile.getFirstName();
+        newProfile.enterFirstName();
+        newProfile.enterLastName();
+
+    }
+
     @After
     public void cleanUp() {
         driver.manage().deleteAllCookies();

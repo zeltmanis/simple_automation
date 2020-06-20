@@ -19,11 +19,11 @@ public class LogInPage {
     this.wait = new WebDriverWait(this.driver, 30);
   }
 
-  private static final String HOME = "//*[@data-test='home']";
+    private static final String HOME = "//*[@data-test='home']";
     private static final String SIGN_IN = "//*[@data-test='sign-in']";
     private static final String ADDRESSES ="//*[@data-test='addresses']";
 
-  @FindBy(xpath = HOME)
+    @FindBy(xpath = HOME)
     WebElement home;
 
     @FindBy(xpath = SIGN_IN)
